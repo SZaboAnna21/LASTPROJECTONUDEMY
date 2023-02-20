@@ -9,7 +9,7 @@ with open("pytonUDEMY2023\\flie.txt") as f:
     cardsLIST=f.read()
 
 if not cardsLIST:
-    print ("lsit is empty")
+    print ("list is empty")
     cardsLIST=[]
     cardList2=[]
 else:
@@ -19,10 +19,10 @@ else:
 
 print(f"Egyenlore {len(cardsLIST)} db szópár van a fáljba ")
 if len(cardsLIST) != 0:
-    megnéziaszavakat=input("meg akarod nézni ezeket a szavakat? (igen/nem)  ")
+    megnéziaszavakat=input("?eg akarod nézni ezeket a szavakat? (igen/nem)  ")
     if megnéziaszavakat=="igen":
         print(cardsLIST)
-        törlés=input("maradjanak vagy töröljük ezeket a szavakt? (marad/töröl)  ")
+        törlés=input("Maradjanak vagy töröljük ezeket a szavakt? (marad/töröl)  ")
         if törlés =="töröl":
             cardsLIST=[]
             cardList2=[]
@@ -50,7 +50,7 @@ def translate(wordhu):
 
 def addANewCard():
     global cardsLIST
-    wordhu=input("kerlek add meg azt a magyar szot amit angolul akarsz megtanulni:  ")
+    wordhu=input("Kerlek add meg azt a magyar szot amit angolul akarsz megtanulni:  ")
     worden = translate(wordhu)
     time.sleep(1)
     print(worden)
