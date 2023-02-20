@@ -4,7 +4,7 @@ import ast
 translator = Translator()
 cardsLIST=[]
 
-
+#1234
 with open("pytonUDEMY2023\\flie.txt") as f:
     cardsLIST=f.read()
 
