@@ -11,10 +11,10 @@ print("HELLO")
 validanswer=["igen","nem"]
 validanswertöröl=["töröl", "marad"]
 
+path="flie.txt"
 
 
-
-with open("pytonUDEMY2023\\flie.txt") as f:
+with open(path) as f:
     cardsLIST=f.read()
 
 if not cardsLIST:
@@ -53,7 +53,7 @@ if len(cardsLIST) != 0:
 
 
 #faljon lévo dolgok törlése
-f = open("pytonUDEMY2023\\flie.txt", "r+") 
+f = open(path, "r+") 
 f.seek(0) 
 f.truncate() 
 
@@ -105,7 +105,7 @@ time.sleep(1)
 print(cardList2)
 if (not cardList2):
     if cardsLIST:
-        with open("C:\\Users\\szabo\\OneDrive\\Dokumentumok\\pyton\\complete_coding_Udemy\\pytonUDEMY2023\\flie.txt", "a") as f:
+        with open(path, "a") as f:
             f.write(str(cardsLIST))
             print("End of program")
     else:
@@ -118,13 +118,13 @@ else:
             loop=False
             if answer =="igen":
                 if not cardsLIST:
-                    with open("C:\\Users\\szabo\\OneDrive\\Dokumentumok\\pyton\\complete_coding_Udemy\\pytonUDEMY2023\\flie.txt", "a") as f:
+                    with open(path, "a") as f:
                         f.write(str(cardList2))
                     print("Hozzáadás...")
                     print("End of program")
                 else:
                     cardList2.extend(cardsLIST)
-                    with open("C:\\Users\\szabo\\OneDrive\\Dokumentumok\\pyton\\complete_coding_Udemy\\pytonUDEMY2023\\flie.txt", "a") as f:
+                    with open(path, "a") as f:
                         f.write(str(cardList2))
                     print("Hozzáadás...")
                     print("End of program")
